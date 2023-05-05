@@ -7,7 +7,7 @@ https://kubebyexample.com/learning-paths/developing-spring-boot-kubernetes/lesso
 
 Here we use minikube as the Kubernetes distribution, but the same steps apply to any Kubernetes distribution.
 
-We also require Jave runtime version >= 17. Spring Boot 3 requires Java 17.
+We also require Java runtime version >= 17. Spring Boot 3 requires Java 17.
 
 This is the repository backing the [Spring Boot externalized Configuration](https://kubebyexample.com/en/learning-paths/developing-spring-boot-kubernetes/lesson-4-deploying-spring-boot-kubernetes-eclipse) lesson for the [Developing with Spring Boot on Kubernetes](https://kubebyexample.com/en/learning-paths/developing-spring-boot-kubernetes) learning path on [kube by example](https://kubebyexample.com).
 
@@ -181,5 +181,8 @@ tom@tom-ubuntu:~/Projects/spring-jkube-external-config$ minikube service list
 The hello.greeting property is now being read from the ConfigMap.
 ![image](https://user-images.githubusercontent.com/27693622/236437868-ff528e4d-4096-42d3-8016-59f10aa90132.png)
 
-
+We can delete our deployment with:
+```bash
+./mvnw k8s:undeploy -Pk8s
+```
 
